@@ -80,3 +80,16 @@ function PLUGIN:SetCustomHeight(client, height)
 		end
 	end
 end
+
+ix.command.Add("CharSetHeight", {
+	description = "Sets the Character's height.",
+	adminOnly = true,
+	arguments = {
+		ix.type.character,
+		bit.bor(ix.type.string, ix.type.optional)
+	},
+	OnRun = function(self, client, target, height)
+		-- show string request if no flags are specified
+        PLUGIN:SetCustomHeight(target, height)
+	end
+})
