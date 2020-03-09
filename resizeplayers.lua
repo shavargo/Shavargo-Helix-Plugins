@@ -75,7 +75,7 @@ function PLUGIN:SetCustomHeight(client, height)
 		character:SetModelScale(scale, 1)
 		for k,v in pairs(boneTable) do
 			local boneID = character:LookupBone(v)
-			local boneScale = 1/scale
+			local boneScale = 1 / scale
 			character:ManipulateBoneScale(boneID, Vector(boneScale, boneScale, boneScale))
 		end
 	end
@@ -90,6 +90,6 @@ ix.command.Add("CharSetHeight", {
 	},
 	OnRun = function(self, client, target, height)
 		-- show string request if no flags are specified
-        PLUGIN:SetCustomHeight(target, height)
+		PLUGIN:SetCustomHeight(target, height)
 	end
 })
