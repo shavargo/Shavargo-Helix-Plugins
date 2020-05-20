@@ -1,3 +1,4 @@
+local PLUGIN = PLUGIN
 PLUGIN.name = "Resizable Characters"
 PLUGIN.author = "Shavargo"
 PLUGIN.description = "Allows resizable Characters based upon their specified height."
